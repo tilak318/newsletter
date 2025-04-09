@@ -4,7 +4,7 @@ from langchain_groq import ChatGroq
 from langchain.agents import Tool, create_react_agent, AgentExecutor
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
-from langchain.tools import DuckDuckGoSearchTool
+from langchain_community.tools import DuckDuckGoSearchTool  # Updated this line
 
 load_dotenv()
 
