@@ -1,8 +1,10 @@
 
 import React, { useEffect, useState } from 'react';
 import { Button } from "@/components/ui/button";
+import { useNavigate } from 'react-router-dom';
 
 const HeroSection: React.FC = () => {
+  const navigate = useNavigate();
   const [typedText, setTypedText] = useState("");
   const textToType = "Engaging newsletters, every time.";
   
@@ -33,17 +35,9 @@ const HeroSection: React.FC = () => {
           <p className="text-lg text-foreground/80 max-w-xl">
             Create professional, personalized newsletters in seconds. Our AI understands your audience and delivers content that resonates.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 pt-4">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white py-6 px-8 text-lg">
-              Try it Free
-            </Button>
-            <Button size="lg" variant="outline" className="py-6 px-8 text-lg">
-              Watch Demo
-            </Button>
-          </div>
-          <div className="pt-4 text-sm text-foreground/70">
-            No credit card required. Free plan available.
-          </div>
+          <p className="text-lg text-foreground/80">
+            Join thousands of marketers, content creators, and businesses who have revolutionized their email strategy.
+          </p>
         </div>
         
         <div className="flex-1 glassmorphism rounded-2xl p-1 shadow-2xl animate-fade-in">
@@ -79,7 +73,12 @@ const HeroSection: React.FC = () => {
                   <div className="animate-pulse-light w-full h-20 bg-gradient-to-r from-muted to-secondary rounded-md"></div>
                 </div>
               </div>
-              <Button className="w-full mt-4 bg-primary">Generate Newsletter</Button>
+              <Button 
+                className="w-full mt-4 bg-primary"
+                onClick={() => navigate('/create')}
+              >
+                Generate Newsletter
+              </Button>
             </div>
           </div>
         </div>

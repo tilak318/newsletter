@@ -1,9 +1,11 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 
 const NavBar: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <nav className="py-4 px-6 md:px-10 w-full backdrop-blur-md bg-background/80 fixed top-0 z-50 border-b">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -17,14 +19,16 @@ const NavBar: React.FC = () => {
         <div className="hidden md:flex items-center space-x-8">
           <Link to="/" className="text-foreground/80 hover:text-foreground transition-colors">Home</Link>
           <Link to="/features" className="text-foreground/80 hover:text-foreground transition-colors">Features</Link>
-          <Link to="/how-it-works" className="text-foreground/80 hover:text-foreground transition-colors">How It Works</Link>
-          <Link to="/examples" className="text-foreground/80 hover:text-foreground transition-colors">Examples</Link>
-          <Link to="/testimonials" className="text-foreground/80 hover:text-foreground transition-colors">Testimonials</Link>
+          <Link to="/create" className="text-foreground/80 hover:text-foreground transition-colors">Create</Link>
         </div>
         
-        <div className="flex items-center space-x-4">
-          <Button variant="outline" className="hidden md:inline-flex">Log In</Button>
-          <Button className="bg-primary hover:bg-primary/90">Get Started</Button>
+        <div className="flex items-center">
+          <Button 
+            className="bg-primary hover:bg-primary/90"
+            onClick={() => navigate('/create')}
+          >
+            Get Started
+          </Button>
         </div>
       </div>
     </nav>
