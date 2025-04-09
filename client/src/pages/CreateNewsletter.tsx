@@ -60,7 +60,8 @@ const CreateNewsletter: React.FC = () => {
       }
 
       // Update to match server endpoint
-      const response = await fetch('http://localhost:8000/api/generate-newsletter', {
+      // const response = await fetch('http://localhost:8000/api/generate-newsletter', {
+        const response = await fetch('https://ainewsletter-server.onrender.com/api/generate-newsletter', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
