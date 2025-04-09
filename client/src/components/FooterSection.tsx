@@ -51,9 +51,9 @@ const FooterSection: React.FC = () => {
           </div>
         </div>
         
-        <div className="mt-12 pt-8 border-t border-border/40 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-base text-foreground/70">
-            © {new Date().getFullYear()} NewsletterAI. All rights reserved. Created by{" "}
+        <div className="mt-12 pt-8 border-t border-border/40">
+          <p className="text-base text-foreground/70 text-center">
+            © 2025 NewsletterAI. All rights reserved. Created by{" "}
             <a 
               href="https://xdev.onrender.com/" 
               target="_blank" 
@@ -63,10 +63,6 @@ const FooterSection: React.FC = () => {
               xDev Solutions
             </a>
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-sm text-foreground/60 hover:text-primary transition-colors">Terms</a>
-            <a href="#" className="text-sm text-foreground/60 hover:text-primary transition-colors">Privacy</a>
-          </div>
         </div>
       </div>
     </footer>
