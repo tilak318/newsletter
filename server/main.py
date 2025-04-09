@@ -4,13 +4,13 @@ from langchain_groq import ChatGroq
 from langchain.agents import Tool, create_react_agent, AgentExecutor
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
-from langchain_community.tools import DuckDuckGoSearchTool  # Updated this line
+from langchain_community.utilities.duckduckgo_search import DuckDuckGoSearchAPIWrapper
 
 load_dotenv()
 
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 MODEL_NAME = os.getenv("MODEL_NAME")
-search_tool = DuckDuckGoSearchTool()
+search = DuckDuckGoSearchAPIWrapper()
 
 def get_llm():
     return ChatGroq(
@@ -23,7 +23,7 @@ def create_researcher_agent(llm):
     tools = [
         Tool(
             name="Search",
-            func=search_tool.run,
+            func=search.run,
             description="Useful for searching the internet for information about topics."
         )
     ]
