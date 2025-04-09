@@ -9,7 +9,7 @@ app = FastAPI()
 # Configure CORS to allow requests from the client
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:8080"],  # Client's URL
+    allow_origins=["http://localhost:8080","https://ainewsletter.onrender.com"],  # Client's URL
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
