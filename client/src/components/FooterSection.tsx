@@ -52,14 +52,14 @@ const FooterSection: React.FC = () => {
         
         <div className="mt-12 pt-8 border-t border-border/40">
           <p className="text-base text-foreground/70 text-center">
-            © 2025 NewsletterAI. All rights reserved.
+            2025 NewsletterAI. All rights reserved.
             <br />
             Developed by{" "}
             <a 
               href="https://xdev.onrender.com/" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="text-primary hover:underline text-lg font-medium"
+              className="text-primary text-xl font-medium hover:text-red-500 hover:scale-105 transition-transform transition-colors duration-300"
             >
               xDev Solutions
             </a>
