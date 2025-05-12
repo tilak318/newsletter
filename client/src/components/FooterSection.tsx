@@ -56,7 +56,7 @@ const FooterSection: React.FC = () => {
             <br />
             Developed by{" "}
             <a 
-              href="https://xdev.onrender.com/" 
+              href="https://xdevsolutions.com" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-primary text-xl font-medium hover:text-red-500 hover:scale-105 transition-transform transition-colors duration-300"
